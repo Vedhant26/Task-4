@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<style>
+/* Basketball animation */
+    #basketball {
+      position: absolute;
+      top: 30px;
+      left: -100px;
+      width: 50px;
+      z-index: 10;
+      animation: dribble 3s ease-in-out forwards;
+    }
+
+    @keyframes dribble {
+      0% { left: -100px; top: 30px; transform: rotate(0); }
+      25% { top: 50px; }
+      50% { top: 30px; left: 45%; transform: rotate(180deg); }
+      75% { top: 50px; }
+      100% { top: 30px; left: 48%; transform: rotate(360deg); }
+    }
+
+    #main-name {
+      transition: transform 0.3s ease;
+      display: inline-block;
+      font-size: 3rem;
+      color: gold;
+    }
+
+    #main-name.tilted {
+      transform: rotate(-12deg);
+    }
+
+    #coder {
+      font-size: 2rem;
+      position: absolute;
+      top: 80px;
+      left: -50px;
+      opacity: 0;
+      animation: coderWalk 3s ease forwards;
+      animation-delay: 3s;
+      z-index: 10;
+    }
+
+    @keyframes coderWalk {
+      0% { left: -50px; opacity: 0; }
+      50% { left: 40%; opacity: 1; }
+      100% { left: 48%; opacity: 1; }
+    }
+
+    #hammer {
+      display: inline-block;
+      opacity: 0;
+      animation: hammerHit 0.3s ease 6s forwards;
+      margin-left: 8px;
+    }
+
+    @keyframes hammerHit {
+      0% { transform: rotate(0); opacity: 0; }
+      50% { transform: rotate(-45deg); opacity: 1; }
+      100% { transform: rotate(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <header class="hero">
+    <div class="intro-wrapper" style="position: relative;">
+      <div class="intro-text" data-aos="fade-right" data-aos-duration="1500">
+        <!-- Basketball Image -->
+        <img id="basketball" src="oop.png" alt="Basketball" />
+
+        <!-- Coder Emoji -->
+        <div id="coder">👨‍💻<span id="hammer">🔨</span></div>
+
+        <!-- Name -->
+       <h1 class="clip-reveal" id="main-name">Vedhant Bidari</h1>
+
+        <p>Product Designer and Developer, based in California.</p>
+        <a href="#my-story" class="btn">My story</a>
+      </div>
+
+      <div class="profile-photo" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+        <img src="lol.jpg" alt="Profile Photo">
+      </div>
+    </div>
+  </header>
+
+
+<section class="quote-section" data-aos="fade-up" data-aos-delay="300">
+  <blockquote>
+    “We must wash away our past. We must atone.”
+  </blockquote>
+  <p class="author">— Vedhant Bidari</p>
+</section>
+
+  <section class="services" data-aos="fade-up">
+    <div class="card">Product Designer.<br><small>120 Projects</small></div>
+    <div class="card">Branding Designer.<br><small>75 Projects</small></div>
+    <div class="card">Full Stack Developer.<br><small>43 Projects</small></div>
+  </section>
+
+  
+  <section class="about-section" id="my-story">
+  <h2 data-aos="fade-up">My Story</h2>
+  <p class="about-intro" data-aos="fade-up" data-aos-delay="100">
+    I'm Vedhant Bidari — a designer, developer, and an ex-basketball athlete. My creative journey was shaped both on the court and in front of the screen.
+  </p>
+
+  <div class="story-block" data-aos="fade-right">
+    <img src="speak.jpg" alt="Basketball Days">
+    <div>
+      <h3>🏀 From Court to Code</h3>
+      <p>
+        Before I touched a line of code, I was dribbling down the court, leading my high school team as captain. Basketball taught me discipline, teamwork, and mental focus — values that fuel my work as a creator today.
+      </p>
+    </div>
+  </div>
+
+  <div class="story-block reverse" data-aos="fade-left">
+    <img src="proj.png" alt="Design Work">
+    <div>
+      <h3>🎨 Finding My Creative Flow</h3>
+      <p>
+        In college, I discovered UI/UX design. I started freelancing, blending creativity with problem-solving. Since then, I’ve designed apps, brand identities, and digital products for startups and agencies across the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="projects-section" id="projects">
+  <h2 data-aos="fade-up">Featured Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="project1.jpg" alt="Project 1">
+      <h3>Creative Portfolio</h3>
+      <p>Branding • Web Design</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="project2.jpg" alt="Project 2">
+      <h3>Startup Landing Page</h3>
+      <p>UI/UX • Frontend Dev</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="project3.jpg" alt="Project 3">
+      <h3>Fitness App Concept</h3>
+      <p>Mobile • Product Design</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-container" data-aos="fade-up">
+    <h2>Let’s Work Together</h2>
+    <p>I’m always open to freelance work, collaboration, or just a good conversation. Drop me a message!</p>
+
+  
+      <div class="contact-photo">
+        <img src="dad.jpg" alt="Your Photo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+  // Tilt the name when basketball reaches
+  setTimeout(() => {
+    document.getElementById("main-name").classList.add("tilted");
+  }, 2000); // after basketball hits
+
+  // Fix it after coder arrives
+  setTimeout(() => {
+    document.getElementById("main-name").classList.remove("tilted");
+  }, 6000); // after coder "repairs"
+</script>
+
+<script>
+  // Basketball hits -> name tilts
+  setTimeout(() => {
+    document.getElementById("main-name").classList.add("tilted");
+  }, 2000);
+
+  // Coder comes -> name fixed
+  setTimeout(() => {
+    document.getElementById("main-name").classList.remove("tilted");
+  }, 6000);
+</script>
+
+
+</body> 
+<footer class="footer" data-aos="fade-up">
+  <div class="footer-container">
+    <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com/Vedhant26" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/vedhant-bidari" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:vedhantvarnika123@gmail.com"><i class="fas fa-paper-plane"></i></a>
+
+    </div>
+  </div>
+</footer>
+
+</html>
